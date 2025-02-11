@@ -1,15 +1,9 @@
 import componenteProduto from "../components/produtos.js";
+import renderizarFiltro from "../components/filtro.js";
 
-const renderizarFiltro = (categorias) => {
-    return `
-        <div id="filtroProdutos">    
-            <select>
-                <option value="">Todas as categorias</option>
-                ${categorias.map(categoria => `<option value="${categoria}">${categoria}</option>`).join('')}
-            </select>
-        </div>
-    `;
-};
+if(!sessionStorage.getItem('userToken')){
+    window.location.href = 'login.html';
+}
 
 async function buscarProdutos(categoria = "") {
     const url = categoria 

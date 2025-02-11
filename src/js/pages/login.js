@@ -17,7 +17,7 @@ async function validarUsuario(usuario){
 
 async function sessionUsuario(token, usuario){
     sessionStorage.clear();
-    const setToken = sessionStorage.setItem('userToken', JSON.stringify(token));
+    const setToken = sessionStorage.setItem('userToken', token.token);
     const setUser = sessionStorage.setItem('userId', await validarUsuario(usuario));
     if(setToken && setUser){
         return true;
