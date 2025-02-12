@@ -3,7 +3,7 @@ const renderizarFiltro = (categorias) => {
         <div id="filtroProdutos">    
             <select>
                 <option value="">Todas as categorias</option>
-                ${categorias.map(categoria => `<option value="${categoria}">${categoria}</option>`).join('')}
+                ${categorias.map(categoria => `<option value="${categoria}">${categoria}</option>`).join("")}
             </select>
         </div>
     `;
