@@ -152,6 +152,9 @@ button, a#addCarrinho{
     &:hover{
         color: rgba(239, 70, 119, 1);
     }
+    &.favoritado{
+        color: rgba(239, 70, 119, 1);
+    }
 }
 
 select{
