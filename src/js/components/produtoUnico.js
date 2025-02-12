@@ -1,5 +1,7 @@
 const componenteProdutoUnico = ({title, image, price, id, description, category}) => {
     let galeria = [];
+    const fav = JSON.parse(localStorage.getItem("favoritos"));
+    
     for(let i = 0; i < 3; i++){
         galeria = [...galeria, image];
     } 
@@ -27,7 +29,7 @@ const componenteProdutoUnico = ({title, image, price, id, description, category}
                 <p>${description}</p>
                 <div class="cta-produtos">
                 <a href="./carrinho.html?produto=${id}" id="addCarrinho">Adicionar ao Carrinho</a>
-                <button data-produto=${id} id="favoritar" class="${!JSON.parse(localStorage.getItem("favoritos")).includes(id)? "favoritado" : ""}">❤</button>
+                <button data-produto=${id} id="favoritar" class="${fav.includes(id.toString()) ? "favoritado" : ""}">❤</button>
                 </div>
             </div>
         </div>

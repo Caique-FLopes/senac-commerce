@@ -4,11 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Carrinho</title>
 </head>
 
 <body>
-    <div id="carrinho"></div>
+    <div id="carrinho">
+        <form name="formCarrinho">
+            <div class="containerInput">
+                <label for="cep">Cep:</label>
+                <input type="text" id="cep" name="cep" placeholder="79000-000">
+            </div>
+            <div class="containerInput">
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" placeholder="estado">
+            </div>
+            <div class="containerInput">
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" placeholder="cidade">
+            </div>
+            <div class="containerInput">
+                <label for="logradouro">Logradouro:</label>
+                <input type="text" id="logradouro" name="logradouro" placeholder="logradouro">
+            </div>
+            <div class="ctaForm">
+                <button type="submit">Comprar</button>
+            </div>
+        </form>
+    </div>
     <script type="module" src="./src/js/pages/carrinho.js"></script>
 </body>
 

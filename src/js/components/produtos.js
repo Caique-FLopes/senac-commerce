@@ -1,4 +1,5 @@
 const componenteProduto = ({title, image, price, id}) => {
+    
     return `
         <div class="produto">
             <a href="./produto.html?produto=${id}">
